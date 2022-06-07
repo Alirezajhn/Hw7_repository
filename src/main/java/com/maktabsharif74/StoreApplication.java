@@ -8,5 +8,6 @@ public class StoreApplication {
     public static void main(String[] args) {
         EntityManagerFactory entityManagerFactory = HibernateUtil.getEntityManagerFactory();
         System.out.println("done");
+
     }
 }

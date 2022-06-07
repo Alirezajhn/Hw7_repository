@@ -1,17 +1,22 @@
 package com.maktabsharif74.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import static com.maktabsharif74.domain.ReadableItems.TABLE_NAME;
 
 @Entity
+@Table(name = ReadableItems.TABLE_NAME)
+public class ReadableItems extends Product {
+    public static final String TABLE_NAME = "ReadableItems";
 
-public class ReadableItems extends Product{
     private String title;
     private String brief;
     private String content;
     private String publisher;
     private String typeItems;
 
-
+    //ReadableItems(product) to basket : many to one
     public ReadableItems() {
 
     }
@@ -69,7 +74,7 @@ public class ReadableItems extends Product{
     @Override
     public String toString() {
         return "ReadableItems{" +
-                super.toString()+
+                super.toString() +
                 "title='" + title + '\'' +
                 ", brief='" + brief + '\'' +
                 ", content='" + content + '\'' +

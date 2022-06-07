@@ -1,13 +1,15 @@
 package com.maktabsharif74.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Inheritance;
+import javax.persistence.Table;
 
 @Entity
-
+@Table(name = User.TABLE_NAME)
 public class User extends Base {
-
+    public static final String TABLE_NAME = "user_table";
+    public static final String Column_USERNAME="username";
+@Column(name = Column_USERNAME , unique = true)
     private String username;
     private String password;
     private String firstName;

@@ -1,12 +1,16 @@
 package com.maktabsharif74.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
+
 
 @Entity
-
-public class Radio extends ElectricalAppliances{
+@Table(name = Radio.TABLE_NAME)
+public class Radio extends ElectricalAppliances {
+    public static final String TABLE_NAME = "Radio";
     private String waveRange;
 
+    //radio(product) to basket : many to one
     public Radio() {
 
     }

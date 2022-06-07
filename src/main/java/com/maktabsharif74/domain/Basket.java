@@ -1,10 +1,14 @@
 package com.maktabsharif74.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
+
+
 
 @Entity
-
-public class Basket extends Base{
+@Table(name = Basket.TABLE_NAME)
+public class Basket extends Base {
+    public static final String TABLE_NAME = "Basket";
     private int productId;
     private String category;
     private int userId;
@@ -60,7 +64,7 @@ public class Basket extends Base{
     @Override
     public String toString() {
         return "Basket{" +
-                super.toString()+
+                super.toString() +
                 "productId=" + productId +
                 ", category='" + category + '\'' +
                 ", userId=" + userId +

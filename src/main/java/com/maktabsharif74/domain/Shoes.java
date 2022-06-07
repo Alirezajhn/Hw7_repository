@@ -1,16 +1,20 @@
 package com.maktabsharif74.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import static com.maktabsharif74.domain.Shoes.TABLE_NAME;
 
 
 @Entity
-
-public class Shoes extends Product{
+@Table(name = Shoes.TABLE_NAME)
+public class Shoes extends Product {
+    public static final String TABLE_NAME = "shoes";
     private String sizeShoes;
     private String color;
     private String typeShoes;
 
-
+    //shoes(product) to basket : many to one
     public Shoes() {
     }
 
@@ -49,7 +53,7 @@ public class Shoes extends Product{
     @Override
     public String toString() {
         return "Shoes{" +
-                super.toString()+
+                super.toString() +
                 "sizeShoes='" + sizeShoes + '\'' +
                 ", color='" + color + '\'' +
                 ", typeShoes='" + typeShoes + '\'' +

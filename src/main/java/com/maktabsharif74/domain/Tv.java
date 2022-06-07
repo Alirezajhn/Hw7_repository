@@ -1,9 +1,14 @@
 package com.maktabsharif74.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import static com.maktabsharif74.domain.Tv.TABLE_NAME;
 
 @Entity
-public class Tv extends ElectricalAppliances{
+@Table(name = Tv.TABLE_NAME)
+public class Tv extends ElectricalAppliances {
+    public static final String TABLE_NAME = "Tv";
     private String screenSize;
     private String qualityResolution;
 
@@ -37,7 +42,7 @@ public class Tv extends ElectricalAppliances{
     @Override
     public String toString() {
         return "Tv{" +
-                super.toString()+
+                super.toString() +
                 "screenSize='" + screenSize + '\'' +
                 ", qualityResolution='" + qualityResolution + '\'' +
                 '}';
