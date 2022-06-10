@@ -1,9 +1,8 @@
 package com.maktabsharif74.domain;
 
 import javax.persistence.Entity;
-import javax.persistence.Table;
 
-import static com.maktabsharif74.domain.Shoes.TABLE_NAME;
+import javax.persistence.Table;
 
 
 @Entity

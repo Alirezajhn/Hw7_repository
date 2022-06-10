@@ -3,8 +3,6 @@ package com.maktabsharif74.domain;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-import static com.maktabsharif74.domain.ReadableItems.TABLE_NAME;
-
 @Entity
 @Table(name = ReadableItems.TABLE_NAME)
 public class ReadableItems extends Product {

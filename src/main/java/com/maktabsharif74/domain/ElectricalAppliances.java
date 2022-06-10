@@ -1,5 +1,9 @@
 package com.maktabsharif74.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
 public abstract class ElectricalAppliances extends Product{
     private String powerSource;
     private String brand;

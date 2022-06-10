@@ -1,5 +1,9 @@
 package com.maktabsharif74.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
 public abstract class Product extends Base{
     private int Unit;
     private int Price;
